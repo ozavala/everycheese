@@ -162,12 +162,7 @@ LOGGING = {
         "console": {
             "level": "DEBUG",
             "class": "logging.StreamHandler",
-            "formatter": "verbose",
-        },
-    },
-    "root": {"level": "INFO", "handlers": ["console"]},
-    "loggers": {
-        "django.request": {
+            "formatterhttp://localhost:8000/accounts/confirm-email/Mg:1k0537:sUOlHiTimwkhY0WuwsiAzxXlOhE/t": {
             "handlers": ["mail_admins"],
             "level": "ERROR",
             "propagate": True,
@@ -177,8 +172,4 @@ LOGGING = {
             "handlers": ["console", "mail_admins"],
             "propagate": True,
         },
-    },
-}
-
-# Your stuff...
-# ------------------------------------------------------------------------------
+    },http://localhost:8000/accounts/confirm-email/Mg:1k0537:sUOlHiTimwkhY0WuwsiAzxXlOhE/localhost:8000/accounts/confirm-email/Mg:1k0537:sUOlHiTimwkhY0WuwsiAzxXlOhE/
