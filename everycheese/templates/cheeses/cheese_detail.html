@@ -6,29 +6,32 @@
 
 <h2>{{ cheese.name }}</h2>
 
-{% if cheese.country_of_origin %}
-    <p>Country of Origin: {{cheese.country_of_origin.name }}
-    <img src="{{ cheese.country_of_origin.flag }}" />
-    </p>
-{% endif %}
-
 {% if cheese.firmness %}
-    <p>Firmness: {{ cheese.get_firmness_display }}</p>
+<p>Firmness: {{ cheese.get_firmness_display }}</p>
 {% endif %}
 
 {% if cheese.description %}
-    <p>{{ cheese.description }}</p>
+<p>{{ cheese.description }}</p>
 {% endif %}
 
+{% if cheese.country_of_origin %}
+    <p>Country of Origin: {{ cheese.country_of_origin.name }}
+    <img src="{{ cheese.country_of_origin.flag }}">
+    </p>
+{% endif %}
 
-<hr/>
-<h3>Submitted by
-    <a href="{% url 'users:detail' cheese.creator.username %}">
-        {{ cheese.creator.username }}
+<hr />
+
+<h3>Submitted by <a href="{% url 'users:detail' cheese.creator.username%}">
+{{ cheese.creator.username }}
+</a></h3>
+
+<p>
+    <a class="btn btn-primary" href="{% url 'cheeses:update' cheese.slug %}">
+        Update
     </a>
-</h3>
-{% if cheese.creator.name %}
-    <p>{{ cheese.creator.name }}</p>
-{% endif %}
+
+</p>
+
 
 {% endblock content %}
