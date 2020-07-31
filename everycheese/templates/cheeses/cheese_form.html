@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ view.action }}{% endblock title %}
+
+
+{% block content %}
+<h1>{{ view.action }} Cheese</h1>
+
+
+<form method="post" action=".">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">{{ view.action }} </button>
+</form>
+
+{% endblock content %}
